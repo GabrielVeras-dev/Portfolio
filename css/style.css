@@ -509,3 +509,58 @@ width: 100%;
 .skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
     width: 90%;
 }
+
+.contato {
+    min-height: auto;
+    padding-bottom: 0;
+}
+
+.contato form {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contato form .input-box {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap0;
+}
+
+.contato form .input-box .input-field {
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+
+.contato form .input-box .input-field input, .contato form .textarea-field textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .6rem;
+    border: .2rem solid var(--main-color);
+}
+
+.contato form .input-box .input-field input::placeholder, .contato form .textarea-field textarea::placeholder {
+    color: var(--text-color);
+}
+
+.contato form .textarea-field {
+    position: relative;
+    margin: .8rem 0 2.7rem;
+    display: flex;
+}
+
+.contato form .textarea-field textarea {
+    resize: none;
+}
+
+.contato form .btn-box.btns .btn{
+    cursor: pointer;
+}
+
+58:44 
