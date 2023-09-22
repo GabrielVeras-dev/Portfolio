@@ -549,6 +549,23 @@ width: 100%;
     color: var(--text-color);
 }
 
+.contato form .focus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: white;
+    border-radius: .6rem;
+    z-index: -1;
+    transition: .5s;
+}
+
+.contato form .input-box .input-field input:focus~.focus,
+.contato form .input-box .input-field input:valid~.focus {
+    width: 100%;
+}
+
 .contato form .textarea-field {
     position: relative;
     margin: .8rem 0 2.7rem;
@@ -563,4 +580,3 @@ width: 100%;
     cursor: pointer;
 }
 
-58:44 
