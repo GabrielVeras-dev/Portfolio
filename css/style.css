@@ -525,7 +525,7 @@ width: 100%;
     position: relative;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap0;
+    flex-wrap: wrap;
 }
 
 .contato form .input-box .input-field {
@@ -555,14 +555,16 @@ width: 100%;
     left: 0;
     width: 0;
     height: 100%;
-    background: white;
+    background: var(--second-bg-color);
     border-radius: .6rem;
     z-index: -1;
     transition: .5s;
 }
 
+/* Validando preenchimento do focus */
 .contato form .input-box .input-field input:focus~.focus,
-.contato form .input-box .input-field input:valid~.focus {
+.contato form .input-box .input-field input:valid~.focus,
+.contato form .textarea-field textarea:focus~.focus, .contato form .textarea-field textarea:valid~.focus{
     width: 100%;
 }
 
@@ -580,3 +582,13 @@ width: 100%;
     cursor: pointer;
 }
 
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+1:02:37 
