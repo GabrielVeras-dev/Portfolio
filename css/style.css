@@ -39,6 +39,11 @@ body{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: .3s;
+}
+
+.header.sticky {
+    background: var(--bg-color);
 }
 
 .logo {
@@ -105,6 +110,11 @@ section {
     line-height: 1.3;   
 }
 
+/* deixar texto do span em branco
+.home-content h1 span {
+    color: var(--text-color);
+}
+*/
 .home-content .text-animate {
     position: relative;
     width: 32.8rem;
@@ -237,7 +247,7 @@ section {
     flex-direction: column;
     gap: 2rem;
     background: var(--second-bg-color);
-    padding-bottom: 6rem;
+    padding-bottom: 8rem;
 }
 
 .heading {
@@ -309,7 +319,7 @@ span {
     align-items: center;
     flex-direction: column;
     min-height: auto;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
 }
 
 .educacao .educacao-row {
@@ -376,7 +386,7 @@ span {
 .educacao-content .content .year {
     font-size: 1.5rem;
     color: var(--main-color);
-    padding-bottom: .5rem;
+    padding-bottom: .6rem;
 }
 
 .educacao-content .content .year i {
@@ -394,7 +404,7 @@ span {
 
 .skills {
     min-height: auto;
-    padding-bottom: 7rem;
+    padding-bottom: 8rem;
     background: var(--second-bg-color);
 }
 
@@ -512,7 +522,7 @@ width: 100%;
 
 .contato {
     min-height: auto;
-    padding-bottom: 0;
+    padding-bottom: 8rem;
 }
 
 .contato form {
@@ -591,4 +601,44 @@ width: 100%;
     background: var(--second-bg-color);
 }
 
-1:02:37 
+.footer-text p {
+font-size: 1.6rem;
+}
+
+.footer-iconTop a {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.footer-iconTop a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--second-bg-color);
+    z-index: -1;
+    transition: .5s;
+}
+
+.footer-iconTop a:hover::before {
+    width: 100%;
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--bg-color);
+}
+
+.footer-iconTop a:hover i {
+    color: var(--main-color);
+}
