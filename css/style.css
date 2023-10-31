@@ -126,6 +126,23 @@ section {
     font-weight: 700;
     color: transparent;
     -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -15rem 0;
+    animation: homeH3Text 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home-content .texto-animado h3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
 }
 
 .home-content p {
@@ -650,11 +667,6 @@ font-size: 1.6rem;
     html {
         font-size:55%
     }
-
-    section {
-
-    }
-
 }
 
 @media (max-width: 991px) {
@@ -799,3 +811,5 @@ font-size: 1.6rem;
         font-size: 5rem;
     }
 }
+
+13026
