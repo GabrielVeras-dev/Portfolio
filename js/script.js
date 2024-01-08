@@ -29,7 +29,7 @@ window.onscroll = () => {
             sec.classList.add('show-animate');
         } // Se quiser usar a animação que se repete na rolagem, use isto:
         else {
-          //  sec.classList.remove('show-animate');
+          sec.classList.remove('show-animate');
         }
 
     });
@@ -41,5 +41,10 @@ window.onscroll = () => {
 // Remover o Toggle Icon quando clicar no navbar links
 menuIcon.classList.remove('bx-x');
 navbar.classList.remove('active');
+
+// Animation footer on scroll
+let footer = document.querySelector('footer');
+
+footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
 
 }
