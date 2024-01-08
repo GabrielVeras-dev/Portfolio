@@ -29,7 +29,7 @@ window.onscroll = () => {
             sec.classList.add('show-animate');
         } // Se quiser usar a animação que se repete na rolagem, use isto:
         else {
-          sec.classList.remove('show-animate');
+          //sec.classList.remove('show-animate');
         }
 
     });
