@@ -533,47 +533,84 @@ span {
 
 /* Porcentagem das barra de progresso */
 
+/* Coding */
+
 .skills-column:nth-child(1) .skills-content .progress:nth-child(1) .bar span {
-  width: 90%;
+  width: 100%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(2) .bar span {
-  width: 80%;
+  width: 85%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(3) .bar span {
-  width: 65%;
+  width: 70%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-  width: 40%;
+  width: 70%;
 }
 
 .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
-  width: 90%;
+  width: 70%;
 }
 
-/* Lado direito */
+.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
+  width: 20%;
+}
+
+/* Support */
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-  width: 90%;
+  width: 100%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
-  width: 80%;
+  width: 100%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(3) .bar span {
-  width: 80%;
+  width: 100%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(4) .bar span {
-  width: 40%;
+  width: 70%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(5) .bar span {
-  width: 90%;
+  width: 70%;
 }
+
+.skills-column:nth-child(2) .skills-content .progress:nth-child(6) .bar span {
+  width: 70%;
+}
+
+/* Soft */
+
+.skills-column:nth-child(3) .skills-content .progress:nth-child(1) .bar span {
+  width: 100%;
+}
+
+.skills-column:nth-child(3) .skills-content .progress:nth-child(2) .bar span {
+  width: 100%;
+}
+
+.skills-column:nth-child(3) .skills-content .progress:nth-child(3) .bar span {
+  width: 100%;
+}
+
+.skills-column:nth-child(3) .skills-content .progress:nth-child(4) .bar span {
+  width: 100%;
+}
+
+.skills-column:nth-child(3) .skills-content .progress:nth-child(5) .bar span {
+  width: 100%;
+}
+
+.skills-column:nth-child(3) .skills-content .progress:nth-child(6) .bar span {
+  width: 100%;
+}
+
 
 .contato {
   min-height: auto;
@@ -754,8 +791,7 @@ section:nth-child(odd) .animate.scroll,
 .sobre.show-animate .animate.scroll,
 .educacao.show-animate .animate.scroll,
 .skills.show-animate .animate.scroll,
-.contato.show-animate .animate.scroll,
-.footer.show-animate .animate.scroll {
+.contato.show-animate .animate.scroll {
   transition-delay: calc(0.3s * var(--i));
   width: 0;
 }
@@ -783,6 +819,7 @@ section:nth-child(odd) .animate.scroll,
   .footer {
     padding: 2rem 4%;
   }
+
 }
 
 @media (max-width: 850px) {
