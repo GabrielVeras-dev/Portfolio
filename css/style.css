@@ -131,7 +131,7 @@ section {
 }
 
 .home-content .texto-animado h3 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 700;
   color: transparent;
   -webkit-text-stroke: 0.7px var(--main-color);
@@ -611,7 +611,7 @@ span {
   width: 100%;
 }
 
-
+/*
 .contato {
   min-height: auto;
   padding-bottom: 8rem;
@@ -671,7 +671,8 @@ span {
   transition: 0.5s;
 }
 
-/* Validando preenchimento do focus */
+*/ 
+/* Validando preenchimento do focus
 .contato form .input-box .input-field input:focus ~ .focus,
 .contato form .input-box .input-field input:valid ~ .focus,
 .contato form .textarea-field textarea:focus ~ .focus,
@@ -692,7 +693,7 @@ span {
 .contato form .btn-box.btns .btn {
   cursor: pointer;
 }
-
+ */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -998,4 +999,206 @@ section:nth-child(odd) .animate.scroll,
   100% {
     width: 0;
   }
+}
+
+
+/* ===== Seção Contato ===== */
+.contato {
+  padding: 10rem 9% 8rem;
+  background: var(--bg-color);
+  text-align: center;
+  position: relative;
+  overflow: visible;
+}
+
+.contato .heading {
+  font-size: 4.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-color);
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.contato .heading span {
+  color: var(--main-color);
+}
+
+/* Texto principal da seção */
+.contato .contato-text {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Ícones de contato */
+.contato .contato-icones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.contato .contato-icones a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  height: 7rem;
+  border: 0.2rem solid var(--main-color);
+  border-radius: 50%;
+  color: var(--main-color);
+  font-size: 3.5rem;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Preenchimento e hover */
+.contato .contato-icones a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--main-color);
+  z-index: -1;
+  transition: 0.6s ease;
+}
+
+.contato .contato-icones a:hover::before {
+  width: 100%;
+}
+
+.contato .contato-icones a:hover {
+  color: var(--bg-color);
+  transform: scale(1.1);
+  box-shadow: 0 0 25px var(--main-color);
+}
+
+/* Animação suave da esquerda para direita */
+.contato.show-animate .heading {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+.contato.show-animate .contato-text {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.4s;
+}
+
+.contato.show-animate .contato-icones a:nth-child(1) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.6s;
+}
+
+.contato.show-animate .contato-icones a:nth-child(2) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 0.8s;
+}
+
+.contato.show-animate .contato-icones a:nth-child(3) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1s;
+}
+
+.contato.show-animate .contato-icones a:nth-child(4) {
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: 1.2s;
+}
+
+/* Animação de flutuação dos ícones */
+@keyframes floatIcon {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.contato .contato-icones a {
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
+.contato .contato-icones a:nth-child(2) { animation-delay: 0.2s; }
+.contato .contato-icones a:nth-child(3) { animation-delay: 0.4s; }
+.contato .contato-icones a:nth-child(4) { animation-delay: 0.6s; }
+
+/* Container do rosto feliz */
+.contato-smile {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+
+    /* Inicial fora da tela à esquerda */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Quando a seção estiver visível */
+.contato.show-animate .contato-smile {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* Rosto */
+.smile-face {
+    position: relative;
+    width: 6rem;
+    height: 6rem;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(0, 171, 240, 0.6);
+
+    /* Flutuação suave */
+    animation: floatSmile 3s ease-in-out infinite;
+}
+
+/* Olhos */
+.smile-eyes {
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+}
+
+.smile-eyes span {
+    display: block;
+    width: 0.8rem;
+    height: 0.8rem;
+    background-color: var(--bg-color);
+    border-radius: 50%;
+}
+
+/* Boca */
+.smile-mouth {
+    position: absolute;
+    bottom: 25%;
+    width: 3rem;
+    height: 1.5rem;
+    border-bottom: 0.4rem solid var(--bg-color);
+    border-radius: 0 0 50% 50%;
+}
+
+/* Flutuação do rosto */
+@keyframes floatSmile {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
 }
